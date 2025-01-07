@@ -11,35 +11,26 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Computer Science, Lehigh University, 2028(expected)
+* M.S. in Computer Science and Engineering, Lehigh University, 2024
+* B.S. in Mathematics, Lehigh University, 2023
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Fall 2024: Teaching Assistant
+  * Lehigh University
+  * Duties included: Assisting with course for CSE 326 Fundamentals of Machine Learning
+  * Supervisor: Professor Lichao Sun
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Summer 2024: Research Intern
+  * Samsung Research America
+  * Duties included: Developed and implemented accelerated inference methods for Large Language Models (EMNLP 2024)
+  * Supervisor: Dr. Xun Chen
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Programming Languages: Python (PyTorch; Gurobi), Java, C, R
 
 Publications
 ======
