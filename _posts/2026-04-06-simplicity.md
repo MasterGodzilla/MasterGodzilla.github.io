@@ -1,11 +1,11 @@
 ---
-title: 'Simplicity Is the Point: On Writing Research Papers'
+title: 'Simplicity: On Paper Writing Styles'
 date: 2026-04-06
 permalink: /posts/2026/04/simplicity/
 tags: [research, writing, AI]
 ---
 
-I think the best writing style for a paper must be extremely simple. So simple that reviewers reject it for not being innovative enough. Only then is the paper really finished.
+I think the best writing style for a paper must be extremely simple. So simple that reviewers reject it for not being innovative enough. Only then can the paper be considered fully revised.
 
 The first time I encountered this idea was when Sora had just come out. I saw Saining Xie write the following about Diffusion Transformer (DiT):
 
@@ -15,7 +15,7 @@ At the time, that sentence hit me hard, but I still did not understand what it r
 
 Two years have passed. In that time I have read a lot of papers, watched all kinds of techniques develop and get applied, and done a few projects myself. Only now do I feel there is something almost Daoist about it: the great way is simple. I probably understand at most one third of it, but here is the part I can explain.
 
-This post discusses why papers should pursue extreme simplicity from three angles: scientific exploration, marketing, and engineering practice. Then I will try to talk about how to put it into practice.
+This post discusses why papers should pursue extreme simplicity from three angles: scientific exploration, marketing, and engineering practice, and then tries to explore how to practice it in actual work.
 
 ## 1. Scientific Exploration
 
@@ -33,7 +33,7 @@ What is the mechanism behind it?
 
 Can the method be reproduced and generalized?
 
-Most people do not investigate carefully. It is like a traditional Chinese medicine prescription: throw in a dozen herbs, call it a compound formula, and in fact have no idea which ingredient is doing the work. Maybe only one molecule in one herb is useful, and the rest are actively harmful. Vague, muddled, half-asleep, and then they call it experience or intuition.
+Most people do not investigate carefully. It is like a traditional Chinese medicine prescription: throw in a dozen herbs, call it a compound formula, and in fact have no idea which ingredient is doing the work. Maybe only one molecule in one herb is useful, and the rest are actively harmful. Vague, muddled, half-asleep, and then they call it experience or touch.
 
 For this kind of problem, not figuring it out is extremely harmful; figuring it out is extremely valuable.
 
@@ -41,7 +41,7 @@ First, if you can identify why the numbers went up, you will often find that the
 
 Second, once the mechanism is clear, you can better understand whether it is a targeted method or something with generality. For example, if an architecture improves a language model, is it exploiting a property of language, or can vision use it too?
 
-Finally, from the perspective of black-box optimization, the more methods and variables you have, the more the number and complexity of possible recipes grow exponentially. Considering interactions among methods, the experiments are basically impossible to finish. So the recipe people guess is usually based on feel, not because it is actually optimal.
+Finally, from the perspective of black-box optimization, the more methods and variables you have, the more the number and complexity of possible recipes grow exponentially. Considering interactions among methods, the experiments are basically impossible to finish. So the recipe people guess is usually based on intuition, not because it is actually optimal.
 
 To avoid exponential grid search, industry usually uses two kinds of methods:
 
@@ -54,25 +54,25 @@ Back to DiT. DiT deliberately did not chase novelty. It simply combined the matu
 
 ## 2. Marketing
 
-An A-god once told me that research pursues impact, and the most important part of impact is the spread of ideas.
+@CPAPCF (Founder of ACLism) once told me that doing research means pursuing impact, and the most important part of impact is the spread of ideas.
 
-An idea that can spread must be simple. People should understand it the moment they hear it. At the same time, it must be extreme enough. Only an extreme version punches through.
+An idea that spreads must be simple. People should understand it the moment they hear it. At the same time, it must be extreme enough. Only an idea pushed to the extreme has the force to cut through.
 
-I vaguely remember taking Andrew Ng's online course in high school. He told us to read the ResNet paper and gave us half an hour. I finished it in five minutes. At the time I thought: residual connection is so simple. Shouldn't any random person have been able to think of this?
+I vaguely remember taking Andrew Ng's online course in high school. He told us to read the ResNet paper and gave us half an hour. I finished it in five minutes. At the time I thought: residual connection is so simple. Shouldn't any random person have been able to think of it?
 
 Years later, looking back, I realized that was completely wrong. I understood it not because I was smart, but because Kaiming He's writing is world-class. He had studied the problem extremely thoroughly and then wrote it in the simplest possible way. The intuition is direct, the logic is tight, and there is not a crack between one sentence and the next. After reading it, you feel it is obvious, as if deep learning was naturally supposed to work this way.
 
 But is reality like that? Is ResNet really that simple and obvious? Of course not. Otherwise, so many earlier deep models would not have collapsed during training, and VGGNet would not have needed to be trained layer by layer.
 
-I once heard, or maybe I imagined, that Kaiming and his coauthors tried many things to stop the model from collapsing. For example, why not use Highway Net? Why must the coefficient of the residual branch be 1? But after they found a stable training path, they kept running ablation after ablation, kept deleting things, and left only the most essential mechanism. Then they looked at it and saw that it was quite similar to the concept of residuals. They did not claim novelty for the sake of novelty. They still called it residual. Everyone understood it immediately, so it spread. Only then were they satisfied.
+I once heard, or maybe I imagined, that Kaiming and his coauthors tried many things to stop the model from collapsing during training. For example, why not use Highway Net? Why must the coefficient of the residual branch be 1? But after they found a stable training path, they kept running ablation after ablation, kept deleting things, and left only the most essential mechanism. Then they looked at it and saw that it was quite similar to the concept of residuals. They did not claim novelty for the sake of novelty. They still called it residual. Everyone understood it immediately, and the idea became easy to spread. Only then were they satisfied.
 
 There is also a funny phenomenon around whether writing is simple.
 
 The less innovative a paper is, say I build some new agent system, the more likely it is to adopt a complex writing style and cram in as many innovation points as possible.
 
-Colorful flowcharts, exhaustive experiment reports, a pile of borrowed concepts, all kinds of NP-Hard graph-theoretic structures, a truckload of benchmarks. Then reviewers can at least give a high score out of respect for the labor.
+Colorful flowcharts, exhaustive experiment reports, a pile of borrowed concepts, all kinds of NP-Hard graph-theoretic structures, and a truckload of benchmarks. Then reviewers can at least give a high score out of respect for the labor.
 
-Calling this carving flowers on shit may be slightly excessive. Calling it melodrama about nothing is absolutely fair.
+Calling this carving flowers on shit may be slightly excessive. Calling it melodrama over nothing is absolutely fair.
 
 But if I am doing truly basic research, trying to innovate on some underlying mechanism, then merely getting readers to accept the idea is already hard. I cannot make a complex problem even more complex. I have to pursue simplicity.
 
@@ -98,13 +98,13 @@ They said that in the earlier submissions, they called the algorithm bipartite P
 
 After hearing this I nearly lost it. I told them: for the camera-ready, change it back. After all, reviewers do not count as human for this purpose, so you can do that to them. But when facing readers, be a little more sincere.
 
-Another question in communication is: who is your audience?
+Another question in idea spread is: who is your audience?
 
 If you think your paper will be remembered, you will not want to write only for a tiny subfield. You will want the whole field to read it.
 
 Among paper readers there will be new students, frontline engineers, venture capitalists from outside the field, company founders, even high school teachers. If you make the writing too hard, they will not understand it. So you should write more simply.
 
-In short, the simpler a paper is, the farther its idea can spread. Like the iPhone in the Steve Jobs era: the design looks minimalist on the surface, subtracting again and again until even a fool can pick it up and use it, while behind it are countless technical breakthroughs and refinements.
+In short, the simpler a paper is, the farther its ideas can spread. Like the iPhone in the Steve Jobs era: the design looks minimalist on the surface, subtracting again and again until even a fool can pick it up and use it, while behind it lie countless technical breakthroughs and refinements.
 
 After reading such a paper, readers should not exclaim how exquisite it is. They should think:
 
@@ -148,7 +148,7 @@ B says: I propose mature solution B. DeepSeek and NVIDIA have both made it work,
 
 You: also fine.
 
-C says: I saw a paper at a top conference. It says that if you use CDEFGHI, several tricks together, it beats the baseline by a full ten points! So elegant, so innovative!
+C says: I saw a paper at a top conference. It says that if you use CDEFGHI, several tricks together, it beats the baseline by a full ten points! So exquisite, so innovative!
 
 You: uh...
 
@@ -166,7 +166,7 @@ Whenever you feel pleased with yourself, ask: have I really understood this clea
 
 Of course, this research style takes more energy than the usual approach. Bad work is not worth this treatment.
 
-But the question is: if you already know the current work is bad, then unless it is for bureaucratic delivery, a grant, or a company performance review, why do it at all?
+But the question is: if you already know the current work is bad, then unless it is for checking a box, a grant, or a company performance review, why do it at all?
 
 And if it is good work, are you really content with only a few people seeing it?
 

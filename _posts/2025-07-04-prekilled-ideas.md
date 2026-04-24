@@ -1,11 +1,11 @@
 ---
-title: 'Ideas I Killed Too Quickly'
+title: 'A Kind of Idea I Kill Off Subconsciously'
 date: 2025-07-04
 permalink: /posts/2025/07/prekilled-ideas/
 tags: [research, AI, ideas]
 ---
 
-I often make a certain kind of mistake: because an idea lacks mathematical elegance, I instinctively kill it off.
+I often make one kind of mistake: when an idea lacks mathematical beauty, I subconsciously kill it off.
 
 And I forget that technology is supposed to serve people.
 
@@ -21,19 +21,19 @@ So I picked up his book.
 
 The idea of a quadtree is very simple.
 
-For one-dimensional real numbers, if we want fast lookup and deletion, we usually use a binary tree. Each branch splits into left and right.
+For one-dimensional real numbers, if we want fast lookup and deletion, we usually use a binary search tree. Each branch splits into left and right.
 
-Then the young Jon Bentley thought: for querying two-dimensional real numbers, should we use a quadtree, where each branch divides the map into upper left, lower left, upper right, and lower right?
+Then the young Jon Bentley thought: for querying two-dimensional points, should we use a quadtree, where each branch divides the map into upper left, lower left, upper right, and lower right?
 
 I am sure I had thought of this idea back in high school when I was learning algorithms, but my subconscious instantly killed it.
 
-Because I thought: if two dimensions need a quadtree, then three dimensions need an octree, four dimensions need a sixteen-tree, and I have vectors with hundreds or thousands of dimensions. Wouldn't it just explode?
+Because I thought: if two dimensions need a quadtree, then three dimensions need an octree, four dimensions need a 16-ary tree, and I have vectors with hundreds or thousands of dimensions. Wouldn't it just blow up?
 
 Curse of dimensionality.
 
-But after reading the paper carefully, I realized I had gotten stuck in a corner.
+But after reading the paper carefully, I realized I had boxed myself in.
 
-There is so much two-dimensional information in real life. Just think about how many map applications there are.
+There is so much two-dimensional data in real life. Just think about how many map applications there are.
 
 If an idea can solve that many problems, is that still not enough?
 
@@ -75,13 +75,13 @@ Does it improve the numbers?
 
 Yes.
 
-Is it expensive?
+Is it costly?
 
 No.
 
-Then what more do you want?
+Then what more could you ask for?
 
-After reflecting on this for a long time, I realized I had been too attached to form. This method is clearly quite clever.
+After reflecting on this for a long time, I realized I had been too attached to appearances. This method is clearly quite clever.
 
 I am writing these two examples because I want to reflect on how many similar ideas I have subconsciously killed.
 

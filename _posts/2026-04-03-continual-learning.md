@@ -1,5 +1,5 @@
 ---
-title: 'Why AI May Not Need Continual Learning'
+title: "Maybe We Shouldn't Implement Continual Learning?"
 date: 2026-04-03
 permalink: /posts/2026/04/continual-learning/
 tags: [AI, LLM, continual learning]
@@ -7,17 +7,17 @@ tags: [AI, LLM, continual learning]
 
 The problem with biomimetics is that the way carbon-based organisms implement something is not necessarily the optimal design for silicon-based organisms.
 
-Take flight, for example. Birds get lift and forward thrust by flapping their wings. The control requirements are so high that even today humans still cannot really build aircraft like that.
+Take flight, for example. Birds get lift and forward thrust by flapping their wings. The control requirements are so high that even today humans still cannot really build similar aircraft.
 
-But humans use fixed wings plus propellers, and get speeds far beyond what birds can do.
+But humans use fixed wings plus propellers, and get speeds far beyond what birds can achieve.
 
 Something similar may be happening again.
 
-For AI, perhaps the biggest unsolved mystery right now is how to achieve continual learning.
+For AI, perhaps the biggest unsolved mystery right now is how to implement continual learning.
 
 Human memory and large language models are completely different:
 
-Human memory is sequential, while the data baked into a large language model during pretraining has no real before-and-after order.
+Human memory is sequential, while the data baked into a large language model during pretraining has no real order of before and after.
 
 Humans have to learn knowledge in order: first addition, subtraction, multiplication, and division; then elementary algebra and plane geometry; and finally calculus. But the training samples for a large language model must be IID, independent and identically distributed. In other words, the sample order has to be completely shuffled.
 
@@ -25,13 +25,13 @@ Human skills may change dynamically during training. A large language model can 
 
 And so on.
 
-According to Dario in a recent interview, if we sort learning and memory by timescale, human learning and evolution contain multiple modes: very long-term genetic evolution, medium- and long-term continual learning, and of course short-term working memory.
+According to Dario in a recent interview, if we order learning and memory temporally, human learning and evolution contain multiple modes: longer-range genetic evolution, medium- and long-term continual learning, and of course short-term working memory.
 
-But the outer-loop pretraining of large language models and the inner-loop in-context learning do not strictly correspond to those learning modes. If you drew a diagram, it would probably look something like that.
+But the outer-loop pretraining of large language models and the inner-loop in-context learning do not strictly correspond to the learning modes above. If you drew a diagram, it would probably look something like this.
 
 So why is this the case? Why can't we implement continual learning?
 
-This post tries to propose the reverse view: it may be precisely because we did not take the continual-learning path that we managed to reach something close to human-level intelligence ten years early.
+This post tries to propose the reverse view: perhaps it is precisely because we did not take the continual-learning path that we managed to reach something close to human-level intelligence ten years early.
 
 First, how much compute does the human brain have?
 
@@ -39,7 +39,7 @@ This question is hard to answer. Maybe it is equivalent to 10,000 H100s, maybe 1
 
 But humans have one feature that is completely different from AI: our training compute and inference compute are equally large.
 
-This may mean that every person's brain makes the largest possible adjustments according to that person's own situation. Neurons are adjusted at any time; ways of thinking are reviewed at any time. One brain per person, training and inference fused together.
+This may mean that every person's brain makes the largest possible adjustments according to that person's own situation. Neurons can be adjusted at any time; ways of thinking can be reviewed at any time. One brain per person, with training and inference fused together.
 
 In that setting, continual learning is the best solution.
 
@@ -47,11 +47,11 @@ AI, however, does not have the same compute budget for training and inference.
 
 During training, it is possible to mobilize thousands, tens of thousands, or even hundreds of thousands of H100s.
 
-During inference, though, GPUs are usually serving customers in parallel. For example, with DS V3, more than a hundred cards doing inference together can reach 2,000 tokens per second per card. But once divided across users, each user gets at most about 40 tokens per second, which is roughly equivalent to each person using only 1/50 of a card during inference.
+During inference, though, GPUs are usually serving customers in parallel. For example, with DS V3, more than a hundred cards doing inference together can reach 2,000 tokens per second per card. But once that is divided across users, each user gets at most about 40 tokens per second, which is roughly equivalent to each person using only 1/50 of a card during inference.
 
 The ratio between inference compute and training compute differs by something like hundreds of thousands of times.
 
-In this situation, using the KV cache as "fast parameters" for personalization is already one of the bigger compensations we can make for the absence of continual learning.
+In this situation, using the KV cache as "fast parameters" for personalization is already one of the larger compensations we can make for the absence of continual learning.
 
 Why does it work this way?
 
@@ -59,9 +59,9 @@ One of the biggest advantages artificial intelligence has over carbon-based inte
 
 As a human, I cannot directly copy my brain and stuff it into someone else's brain. But a large language model can.
 
-Being able to do something means a constraint has been lifted, and that must be a good thing. But how exactly does this good thing show up?
+Being able to do something means a constraint has been lifted, and that must be a good thing. But how exactly does this benefit show up?
 
-I think the benefit is precisely this: when per-person inference compute is only one hundred-thousandth or one millionth of a human brain, we can still economically amortize the cost of training the model across tens of millions or hundreds of millions of users. Through an alternative method called pretraining, it can achieve superhuman intelligence at low cost.
+I think the benefit is precisely this: when per-person inference compute is only one hundred-thousandth or one millionth of a human brain, we can still economically amortize the cost of training the model across tens of millions or hundreds of millions of users, allowing it to achieve superhuman intelligence at low cost through the different route of pretraining.
 
 This difference may also be why it succeeded. It may not be as adaptable as humans, but the breadth of its knowledge is genuinely beyond any individual human.
 
@@ -73,7 +73,7 @@ Chinchilla optimal says that if total training compute is fixed, the parameter c
 
 But normal people today do not train models this way, because you cannot consider only training cost and ignore inference cost.
 
-The more common approach is to use a smaller model and train it on far more data than Chinchilla optimal. This is not the strongest model you could train under a fixed compute budget, but it is competitive in the market. Users can only use it if it is cheap enough.
+The more common approach is to use a smaller model and train it on far more data than Chinchilla optimal. This is not the strongest model you could train under a fixed compute budget, but it is genuinely competitive in the market. Users can only use it if it is cheap enough.
 
 So with 10,000 GPUs, scaling the parameter count to 100T, plus a sparsification scheme even more aggressive than MoE, should not be much of a problem for one person.
 
@@ -83,13 +83,13 @@ Yann LeCun once described the famous cake analogy: training should be mainly uns
 
 But if we have far more compute than data, does that still matter? It seems like it might not.
 
-For every text we read, we could do a huge amount of analysis to decide whether to absorb it, how to absorb it, whether to filter it out, or whether to use it for data augmentation. All of that would be possible.
+For every piece of text we read, we could do a huge amount of analysis to decide whether to absorb it, how to absorb it, whether to filter it out, or whether to use it for data augmentation. All of that would be possible.
 
-Third, in order to compress information, deep learning models often use superposition to squeeze lots of information into one vector space, which makes things like memory editing difficult. If there are that many parameters, could we just turn all of it into sparse memory retrieval? It seems possible too.
+Third, in order to compress information, deep learning models often use superposition to squeeze lots of information into one vector space, which makes things like memory editing difficult. If there are that many parameters, could we just turn all of them into sparse memory retrieval? That seems possible too.
 
 Of course, the economics absolutely do not allow us to do this.
 
-In the future, if every real person averages 10,000 GPUs, will we use human-like continual learning?
+In the future, if every person really had 10,000 GPUs on average, would we use human-like continual learning?
 
 Hard to say. Maybe it depends on how much an application needs personalization. But it is also possible that people will discover that the extra hundreds of thousands of times more compute is still better pooled together for shared learning.
 
@@ -109,7 +109,7 @@ This seems like it should still depend on continual learning.
 
 But if I am a robot manufacturer, I could simply use simulation or real-world scenes, build ten million common home layouts, and let the robot learn most of what it needs in advance. When it arrives, because it has seen similar cases before, it can directly generalize in context. That also seems workable?
 
-Both of these dumb methods may be able to brute-force abilities that, in principle, should have been achieved through continual learning. Does that mean inference-side compute can be smaller by thousands of times?
+Both of these crude methods may be able to brute-force abilities that, in principle, should have been achieved through continual learning. Does that mean inference-side compute can be thousands of times smaller?
 
 In short, the fact that continual learning has not been implemented is not necessarily a bad thing.
 

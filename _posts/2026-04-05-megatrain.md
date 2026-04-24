@@ -1,17 +1,17 @@
 ---
-title: 'How to Train 100B+ LLMs on a Single GPU'
+title: 'How to Train 100B+ Large Models on a Single GPU'
 date: 2026-04-05
 permalink: /posts/2026/04/megatrain/
 tags: [AI, LLM, training]
 ---
 
-Small card, huge model. The GPU-poor are about to rise up!
+Small GPU, huge model. The GPU-poor are about to rise up!
 
-Today, we are officially releasing the MegaTrain training framework. It can train 100B+ models on a single GPU, in full precision, with full parameters, without slowing down.
+Today, we are officially releasing the MegaTrain training framework. It can train 100B+ large models on a single GPU, in full precision, with full parameters, without slowing down.
 
 The config follows the Llama Factory format, so it works out of the box. The only thing to watch out for is that the larger your batch size, the faster it runs. Some of you may need to change old habits.
 
-I hope this helps everyone escape the pain of being GPU Poor.
+I hope this helps everyone escape the pain of being GPU-poor.
 
 GitHub: MegaTrain  
 github.com/DLYuanGod/MegaTrain
@@ -33,7 +33,7 @@ Most people, having suffered through CUDA Out of Memory, at least know how much 
 
 If you do a quick calculation, you may realize: I am training a 7B model. Parameters take 2x in bf16, gradients take 2x in bf16, and Adam's momentum and variance add another fp32 * 2. At minimum, that is 12x the parameter count in memory, or 96GB. Add activations and all the other odds and ends, and it just fills an H200. Any larger and you cannot train it. The batch size can only be a few thousand tokens.
 
-But above HBM, there is SRAM, meaning L2/L3 cache. Tri Dao already gave us a make-up lesson on this in FlashAttention. Below HBM, there is all kinds of CPU memory, DDR/LPDDR, plus solid-state storage, NVMe SSDs. What can they do? We are not too sure, so we treat them like useless accessories and leave them off to the side.
+But above HBM (High Bandwidth Memory), there is SRAM, meaning L2/L3 cache. Tri Dao already gave us a make-up lesson on this in FlashAttention. Below HBM, there is system memory on the CPU side, DDR/LPDDR, plus NVMe SSD solid-state storage. What can they do? We are not too sure, so we treat them like useless accessories and leave them off to the side.
 
 I was one of those people too. I often used my math background as an excuse for not properly learning computer systems. To be honest, I was not that good at math either.
 
@@ -65,7 +65,7 @@ Further out is GPU memory, which everyone is more familiar with.
 
 Common cards use GDDR: tens of GB, roughly 1TB/s of bandwidth, and before the price spikes you could buy it for about $2/GB. This is what gaming cards carry.
 
-Or you can use HBM, which can exceed 100GB. In essence, it is 3D-stacked GDDR, stacked in 12 to 16 layers depending on the version. This is much more expensive: about $25/GB.
+Or you can use HBM, High Bandwidth Memory, which can exceed 100GB. Roughly speaking, it is high-bandwidth DRAM stacked in 12 to 16 layers depending on the version. This is much more expensive: about $25/GB.
 
 On the host side, there is system memory, which some people call CPU memory. Capacity can reach several TB, but bandwidth drops by an order of magnitude.
 
@@ -93,11 +93,11 @@ First, as mentioned above, LLM training uses three kinds of memory. Persistent s
 
 Persistent storage grows with model size. Together it is 12x the parameter count. This is the main memory problem we handle.
 
-For the model parameters, gradients, and optimizer states, we put all of them in host memory. The GPU is used only as a temporary compute engine, or you can think of it as a higher-level cache, rather than the storage area for all information.
+For the model parameters, gradients, and optimizer states, we put all of them in host memory. The GPU is used only as a temporary compute engine, or you can think of it as a higher-level cache, rather than the place where all information is stored.
 
 Then the parameters do not need to stay on the card all the time. We transfer whichever layer is needed.
 
-During this process, gradients are handled similarly. Going backward, once the gradient for a layer is computed, it is transferred down.
+During this process, gradients are handled similarly. Going backward, once the gradient for a layer is computed, it is transferred back down.
 
 As for optimizer states, we follow DeepSpeed and do not upload them at all. They are computed entirely on the CPU.
 
@@ -125,7 +125,7 @@ We decided not to transfer activations down, because this number grows with batc
 
 So how do we limit their growth? Very aggressive recomputation.
 
-We basically recompute every few layers, which greatly reduces memory use. Of course, recomputation this aggressive adds extra compute cost and makes things a little slower, but I assume everyone here is broke and will not mind.
+We basically recompute every few layers, which greatly reduces memory use. Of course, recomputation this aggressive adds extra compute cost and makes things a little slower, but I assume everyone here is GPU-poor and will not mind.
 
 The remaining optimizations are mainly about overlapping communication and computation.
 
@@ -133,7 +133,7 @@ For example, zhengqing wrote a lot of new memory-management tricks, reserving a 
 
 On the GPU, it is called a buffer. It stores at most two layers, so while the current layer is computing, the next layer is already being transferred. No waiting is needed.
 
-On the CPU, it is called a gradient slab, also used to reserve space ahead of time for gradient transfer. The GPU can use Direct Memory Access, DMA.
+On the CPU, it is called a gradient slab, also used to reserve space ahead of time for gradient transfer. The GPU can use Direct Memory Access (DMA).
 
 Another change is that normal PyTorch computation needs an autograd graph, which records the entire backpropagation path. It is complicated and creates all kinds of scheduling inconvenience.
 

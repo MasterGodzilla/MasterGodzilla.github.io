@@ -28,3 +28,4 @@ Recent commits use short, imperative or descriptive subjects such as `papers` an
 ## Agent-Specific Instructions
 
 Keep edits scoped to the requested content or theme area. Do not rewrite vendored Sass, font files, or generated minified JavaScript unless the source change requires it. Preserve user content and avoid broad template refactors unless explicitly requested.
+Treat original source drafts, including files under `blogs_drafts/`, as read-only unless the user explicitly asks to edit those originals; create derived posts or assets elsewhere instead of modifying source drafts in place.
