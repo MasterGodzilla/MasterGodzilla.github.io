@@ -24,3 +24,7 @@ Large Language Models, Efficient Training and Inference, Natural Language Proces
 - [March 2026] [Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing](https://arxiv.org/abs/2603.11535) is available on arXiv.
 
 - [May-August 2025] I joined [Adobe](https://www.adobe.com/) as a research intern.
+
+- [September 2024] [SpecHub: Provable Acceleration to Multi-Draft Speculative Decoding](https://aclanthology.org/2024.emnlp-main.1148/) has been accepted to EMNLP 2024 (main).
+
+- [September 2024] [Virtual Context Enhancing Jailbreak Attacks with Special Token Injection](https://aclanthology.org/2024.findings-emnlp.692/) has been accepted to Findings of EMNLP 2024.

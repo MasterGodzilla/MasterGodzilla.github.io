@@ -42,6 +42,8 @@ Publications
 ======
 * Zhengqing Yuan, Hanchi Sun, Lichao Sun, and Yanfang Ye. (2026). [MegaTrain: Full Precision Training of 100B+ Parameter Large Language Models on a Single GPU](https://arxiv.org/abs/2604.05091). arXiv preprint arXiv:2604.05091.
 * Hanchi Sun, Yixin Liu, Yonghui Wu, and Lichao Sun. (2026). [Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing](https://arxiv.org/abs/2603.11535). arXiv preprint arXiv:2603.11535.
+* Ryan Sun, Tianyi Zhou, Xun Chen, and Lichao Sun. (2024). [SpecHub: Provable Acceleration to Multi-Draft Speculative Decoding](https://aclanthology.org/2024.emnlp-main.1148/). EMNLP 2024.
+* Zhou, Yuqi, Lin Lu, Ryan Sun, Pan Zhou, and Lichao Sun. (2024). [Virtual Context Enhancing Jailbreak Attacks with Special Token Injection](https://aclanthology.org/2024.findings-emnlp.692/). Findings of EMNLP 2024.
   
 <!-- Talks
 ======
