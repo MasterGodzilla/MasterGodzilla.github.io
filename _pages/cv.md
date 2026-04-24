@@ -18,6 +18,12 @@ Education
 Work experience
 ======
 
+* May-August 2026: Research Intern
+  * Adobe
+
+* May-August 2025: Research Intern
+  * Adobe
+
 * Fall 2024: Teaching Assistant
   * Lehigh University
   * Duties included: Assisting with course for CSE 326 Fundamentals of Machine Learning
@@ -34,9 +40,8 @@ Skills
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+* Zhengqing Yuan, Hanchi Sun, Lichao Sun, and Yanfang Ye. (2026). [MegaTrain: Full Precision Training of 100B+ Parameter Large Language Models on a Single GPU](https://arxiv.org/abs/2604.05091). arXiv preprint arXiv:2604.05091.
+* Hanchi Sun, Yixin Liu, Yonghui Wu, and Lichao Sun. (2026). [Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing](https://arxiv.org/abs/2603.11535). arXiv preprint arXiv:2603.11535.
   
 <!-- Talks
 ======

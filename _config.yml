@@ -8,9 +8,9 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Ryan Sun's Personal Website"
+title                    : "Hanchi Sun's Personal Website"
 title_separator          : "-"
-name                     : &name "Ryan Sun"
+name                     : &name "Hanchi Sun"
 description              : &description "personal description"
 url                      : https://MasterGodzilla.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -22,7 +22,7 @@ repository               : "MasterGodzilla/MasterGodzilla.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Ryan Sun"
+  name             : "Hanchi Sun"
   pronouns         : # example: "she/her"  
   bio              : "Large Language Model"
   location         : "Bethlehem, PA, USA"

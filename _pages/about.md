@@ -7,16 +7,20 @@ redirect_from:
   - /about.html
 ---
 
-Ryan Sun is a first year PhD student in the [Computer Science and Engineering](https://engineering.lehigh.edu/cse) department at [Lehigh University](https://www2.lehigh.edu/). His advisor is [Professor Lichao Sun](https://lichao-sun.github.io/). Before that, he was a master's and undergraduate student at Lehigh University studying Computer Science and Mathematics.
+Hanchi Sun is a first-year PhD student in the [Computer Science and Engineering](https://engineering.lehigh.edu/cse) department at [Lehigh University](https://www2.lehigh.edu/). His advisor is [Professor Lichao Sun](https://lichao-sun.github.io/). Before that, he was a master's and undergraduate student at Lehigh University studying Computer Science and Mathematics.
 
-His research interests center around large language models. Some areas he has worked on include accelerated inference and safety, like watermarking and jailbreaks.
+His research interests center around large language models, with a focus on efficient training and inference.
 
 # Research Interests
 
-Natural Language Processing, Trustworthy AI
+Large Language Models, Efficient Training and Inference, Natural Language Processing
 
-# News and Highlights
+# News
 
-- [September 2024] [SpecHub: Provable Acceleration to Multi-Draft Speculative Decoding](https://aclanthology.org/2024.emnlp-main.1148/) has been accepted to EMNLP 2024 (main). 
+- [May-August 2026] I will join [Adobe](https://www.adobe.com/) as a research intern.
 
-- [September 2024] [Virtual Context Enhancing Jailbreak Attacks with Special Token Injection](https://aclanthology.org/2024.findings-emnlp.692/) has been accepted to Findings of EMNLP 2024.
+- [April 2026] [MegaTrain: Full Precision Training of 100B+ Parameter Large Language Models on a Single GPU](https://arxiv.org/abs/2604.05091) is available on arXiv.
+
+- [March 2026] [Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing](https://arxiv.org/abs/2603.11535) is available on arXiv.
+
+- [May-August 2025] I joined [Adobe](https://www.adobe.com/) as a research intern.
