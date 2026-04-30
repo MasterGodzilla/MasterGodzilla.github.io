@@ -1,5 +1,5 @@
 ---
-title: 'The Business Model of LLMs (Part 1): The Learning Curve'
+title: 'The Business Model of LLMs'
 date: 2026-04-30
 permalink: /posts/2026/04/business-model-llms/
 tags: [AI, LLM, business]
@@ -18,6 +18,8 @@ So, how should we understand the competitive logic of LLMs?
 I believe we can apply the logic of the semiconductor industry.
 Training a model is like R&D in semiconductors.
 Inference is like manufacturing.
+
+## Part 1: The Learning Curve
 
 How does the semiconductor industry determine winners and losers?
 The core principle is the learning curve.
@@ -172,7 +174,9 @@ First, a look at the supply side.
 Second, a discussion of the demand side.
 Third, whether patterns from the semiconductor industry can be applied to LLM development.
 
-## The Business of LLMs (Part 2): Inference
+---
+
+## Part 2: Inference
 
 Let’s start with the supply side.
 LLM supply is straightforward.
@@ -304,7 +308,9 @@ No matter how brilliant Chinese researchers are, you can’t rapidly train a bet
 This shows that inference scale and R&D investment are linearly related.
 And because the benefits of R&D radiate across all production, R&D costs are amortized by scale.
 
-## The Business of LLMs (Part 3): Demand
+---
+
+## Part 3: Demand
 
 Everything above rests on one premise: you can find enough demand.
 That demand won’t materialize automatically.
@@ -395,7 +401,9 @@ If there are a billion such machines in the world, that might mean ten billion G
 Of course, none of this may materialize until around 2035.
 Honestly, that’s not so far away.
 
-## The Business of LLMs (Part 4): Industry Consolidation
+---
+
+## Part 4: Industry Consolidation
 
 As discussed, we start from two assumptions.
 First, LLMs are a mass-market commodity.
@@ -486,7 +494,9 @@ As for large companies exiting, I don’t work at one, so I don’t really know.
 But the general pattern is: you see massive spending with no visible return.
 And you kill the project, like Microsoft has done with some efforts.
 
-## The Business of LLMs (Part 5): Specialization
+---
+
+## Part 5: Specialization
 
 Another phenomenon that may follow semiconductor dynamics is the emergence of vertical分工 and specialization.
 Semiconductors are an extraordinarily complex industry.
@@ -707,7 +717,9 @@ Their Trainium is probably about as hard to use as Ascend.
 Let the Thinking Machines folks fix Trainium.
 I think that could work.
 
-## The Business of LLMs (Part 6): Customization
+---
+
+## Part 6: Customization
 
 TSMC founder Morris Chang repeatedly emphasized in his autobiography that he preferred "customized" products over "mass-market" products.
 Because the former typically command higher gross margins.
