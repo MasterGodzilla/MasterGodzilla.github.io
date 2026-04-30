@@ -20,6 +20,7 @@ Use Markdown with YAML front matter for site content. Match existing collection 
 ## Testing Guidelines
 
 There is no dedicated automated test suite in this repository. Validate changes by running `jekyll serve -l -H localhost` and checking the affected pages for build warnings, broken layout, missing assets, and correct links. For JavaScript edits, run `npm run build:js` and verify the generated `assets/js/main.min.js` behaves as expected in the browser.
+For agent work, do not run local build or test commands unless the user explicitly asks; GitHub Pages will build the site after push.
 
 ## Commit & Pull Request Guidelines
 
